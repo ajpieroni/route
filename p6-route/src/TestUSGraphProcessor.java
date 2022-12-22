@@ -23,8 +23,8 @@ import java.util.*;
 public class TestUSGraphProcessor {
 	GraphProcessor usDriver = new GraphProcessor();
 	Map<String, Point> usCityLookup;
-	String usGraphFile = "data/usa.graph";
-	String usCities = "data/uscities.csv";
+	String usGraphFile = "p6-route/data/usa.graph";
+	String usCities = "p6-route/data/uscities.csv";
 
 	// Setup to initialize driver before tests
 	@BeforeEach

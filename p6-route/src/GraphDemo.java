@@ -11,7 +11,6 @@ import java.util.*;
  * Demonstrates the calculation of shortest paths in the US Highway
  * network, showing the functionality of GraphProcessor and using
  * Visualize
- * To do: Add your name(s) as authors
  */
 public class GraphDemo {
     public static void main(String[] args) throws Exception {
@@ -19,7 +18,7 @@ public class GraphDemo {
         //INITALIZE
         
         GraphProcessor obj = new GraphProcessor();
-        FileInputStream input = new FileInputStream("data/usa.graph");
+        FileInputStream input = new FileInputStream("p6-route/data/usa.graph");
         obj.initialize(input);
 
         //SCANNER
@@ -69,7 +68,7 @@ public class GraphDemo {
         System.out.println("Route between " + cityStartCoord.toString() + "and " + cityEndCoord.toString() + "is " + outRouteDist + " miles.");
         System.out.println("Total time to get nearest points, route, and get distance: " + elapseNanos*0.000001 + "ms." );
 
-        Visualize objVis = new Visualize("data/usa.vis", "images/usa.png");
+        Visualize objVis = new Visualize("p6-route/data/usa.vis", "p6-route/images/usa.png");
 
         //objVis.drawPoint(cityStartCoord);
         //objVis.drawPoint(cityEndCoord);
@@ -82,7 +81,7 @@ public class GraphDemo {
     //PULL DATA FROM .CSV
     public static Point searchCSV(String cityFromSaved) throws IOException{
         String splitBy = ",";
-        BufferedReader br = new BufferedReader(new FileReader("data/uscities.csv"));
+        BufferedReader br = new BufferedReader(new FileReader("p6-route/data/uscities.csv"));
         String line;
         Double cityLat;
         Double cityLon;
